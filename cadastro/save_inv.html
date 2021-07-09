@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Investimentos</title>
+    <!--    CSS E JS    --->
+    <link rel="stylesheet" href="css/invest.css">
+    <script type="text/javascript" src="save.js"></script>
+    <script src="https://kit.fontawesome.com/1fa979fe85.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--    SETA    --->
+    <header><a href="save.html">
+            <img src="../img/seta_esquerda.png" alt="SetaEsquerda" style="width:70px;height:70px;">
+        </a></header>
+
+    <nav>
+        <!--    FORMULARIO    --->
+        <div id="objeto">
+            <fieldset>
+                <br>
+                <i class="fas fa-dollar-sign" style="font-size:50px;"></i>
+                <h3>Cadastro de Ativos</h3>
+                <!--    MENU SUSPENSO    --->
+                <form id="mes" method="GET" action="">
+                    <label>Mes<br></label>
+                    <select>
+                        <option value="Janeiro">Janeiro</option>
+                        <option value="Fevereiro">Fevereiro</option>
+                        <option value="Março">Março</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Maio">Maio</option>
+                        <option value="Junho">Junho</option>
+                        <option value="Julho">Julho</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Setembro">Setembro</option>
+                        <option value="Outubro">Outubro</option>
+                        <option value="Novembro">Novembro</option>
+                        <option value="Dezembro">Dezembro</option>
+                    </select>
+                </form>
+                <br>
+                <!-- PLATAFORMA -->
+                <form id="plataforma" method="GET" action="">
+                    <label>Plataforma<br></label>
+                    <select>
+                        <option value="1">Clear</option>
+                        <option value="2">XP Investimentos</option>
+                        <option value="3">Modal Mais</option>
+                        <option value="4">Binance</option>
+                        <option value="5">Coinbase</option>
+                        <option value="6">Tesouro Nacional</option>
+                        <option value="7">Avenue</option>
+                        <option value="8">Passfolio</option>
+                        <option value="9">C6 Bank</option>
+                        <option value="10">Itau</option>
+                        <option value="11">Bradesco</option>
+                    </select>
+                </form>
+                <br>
+                <!-- TIPO DE INVESTIMENTO -->
+                <form id="tipo" method="GET" action="">
+                    <label>Tipo<br></label>
+                    <select>
+                        <option value="tipo1">Ações</option>
+                        <option value="tipo2">FIIS</option>
+                        <option value="tipo3">Cripto</option>
+                        <option value="tipo4">SELIC/IPCA</option>
+                        <option value="tipo5">Bolsa EUA</option>
+                        <option value="tipo6">CDB/CDI</option>
+                    </select>
+                </form>
+                <br>
+                <!-- CAIXA DE TEXTO -->
+                <form id="formulario" method="POST" action="../bd/invest.php">
+                    <label>Quantidade: <br> </label><input type="number" name="quantidade" min="0"><br><br>
+                    <label>Total Investido: <br> </label><input type="number" name="investido" min="0"><br><br>
+                    <label>Total Atual: <br> </label><input type="number" name="atual" min="0"><br><br>
+                    <input id="btn_enviar" type="submit" value="Cadastrar">
+                </form>
+            </fieldset>
+        </div>
+    </nav>
+    <!--    FIM DO FORMULARIO     --->
+
+</body>
+
+</html>

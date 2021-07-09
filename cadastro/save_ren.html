@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Fonte de Renda</title>
+    <!--    CSS E JS    --->
+    <link rel="stylesheet" href="css/renda.css">
+    <script type="text/javascript" src="save.js"></script>
+    <script src="https://kit.fontawesome.com/1fa979fe85.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/select.js"></script>
+</head>
+
+<body>
+    <!--    SETA    --->
+    <header><a href="save.html">
+            <img src="../img/seta_esquerda2.png" alt="SetaEsquerda" style="width:70px;height:70px;">
+        </a></header>
+
+    <nav>
+        <!--    FORMULARIO    --->
+        <div id="objeto">
+            <fieldset>
+                <br>
+                <i class="fas fa-dollar-sign" style="font-size:50px;"></i>
+                <h3>Cadastro de Renda</h3>
+                <!--    MENU SUSPENSO    --->
+                <form id="mes" method="GET" action="">
+                    <label>Mes<br></label>
+                    <select>
+                        <option value="Janeiro">Janeiro</option>
+                        <option value="Fevereiro">Fevereiro</option>
+                        <option value="Março">Março</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Maio">Maio</option>
+                        <option value="Junho">Junho</option>
+                        <option value="Julho">Julho</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Setembro">Setembro</option>
+                        <option value="Outubro">Outubro</option>
+                        <option value="Novembro">Novembro</option>
+                        <option value="Dezembro">Dezembro</option>
+                    </select>
+
+
+                </form>
+                <br>
+
+                <!-- FONTE DE RENDA -->
+                <form id="renda" method="GET" action="">
+                    <label>Renda<br></label>
+                    <select>
+                        <option value="renda1">CLT</option>
+                        <option value="renda2">Entregador de Comida</option>
+                        <option value="renda3">Motorista de App</option>
+                        <option value="renda4">Freelancer</option>
+                        <option value="renda5">Contrato PJ</option>
+                        <option value="renda6">Revenda</option>
+                    </select>
+                </form>
+                <br>
+                <!-- CAIXA DE TEXTO -->
+                <form id="formulario" method="POST" action="../bd/invest.php">
+                    <label>Renda Mensal: <br> </label><input type="number" name="rendamensal" min="0"><br><br>
+                    <input id="btn_enviar" type="submit" value="Cadastrar">
+                </form>
+            </fieldset>
+        </div>
+    </nav>
+    <!--    FIM DO FORMULARIO     --->
+
+</body>
+
+</html>
