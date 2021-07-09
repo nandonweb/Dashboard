@@ -1,0 +1,14 @@
+<form name="cityselect" onsubmit="return redirectTo(this)">
+    <select name="menu" value="GO">
+      <option selected="selected">Select One</option>
+      <option value="http://www.google.com">Google</option>
+      <option value="http://www.facebook.com">Facebook</option>
+    </select>
+  </form>
+  
+  <script>
+    function redirectTo(elem) {
+      event.preventDefault();
+      top.location.href = elem.firstElementChild.options[elem.firstElementChild.selectedIndex].value
+    }
+  </script>
