@@ -7,7 +7,7 @@ function drawChart() {
     ['Tesouro Nacional', 15000],
     ['Bolsa EUA', 5000],
     ['CDB/CDI', 20000],
-    ['Bolsa de Valores', 15000]
+    ['Bolsa de Valores', 15001]
   ]);
 
   var options = {

@@ -1,9 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("../../img/renda2.jpg");
-    width:1820px;
-    height:980px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -95,6 +92,16 @@ fieldset {
     box-shadow: 7px 7px 10px rgb(32, 31, 31);
 }
 
+input {
+    padding: 8px;
+    font: 15px Arial;
+    width: 60%;
+}
+
+p {
+    color:red;
+}
+
 #btn_enviar {
     background: #3D94F6;
     background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
@@ -133,6 +140,6 @@ fieldset {
 
 footer {
     position: absolute;
-    margin-left: 830px;
+    margin-left: 831px;
     bottom: 0;
 }

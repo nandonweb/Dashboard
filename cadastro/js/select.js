@@ -75,6 +75,6 @@ function closeAllSelect(elmnt) {
   }
 }
 
-/* If the user clicks anywhere outside the select box,
+/* If the user clicks anywhere outside the select box2,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);

@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inserir Dados</title>
+    <title>Cadastrar Capital</title>
+    <!--    CSS E JS    --->
+    <link rel="stylesheet" href="css/cap.css">
+    <script src="https://kit.fontawesome.com/1fa979fe85.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+    <script src="js/cap_save.js"></script>
 </head>
+
 <body>
-    <h1>Em Construção</h1>
+    <!--    SETA    --->
+    <header><a href="save.html">
+            <img src="../img/seta_esquerda2.png" alt="SetaEsquerda" style="width:70px;height:70px;">
+        </a></header>
+
+    <nav>
+        <!--    FORMULARIO    --->
+        <div id="objeto">
+            <fieldset>
+                <br>
+                <i class="fas fa-coins" style="font-size:50px;"></i>
+                <h3>Cadastro de Capital</h3>
+                <!--    MENU SUSPENSO    --->
+                </form>
+                <br>
+
+                <!-- PROTEÇÃO DE CAPITAL -->
+                <form id="protecaocapital" method="GET" action="">
+                    <label>Tipo<br></label>
+                    <select id="capital">
+                        <option selected="selected" disabled="disabled">Selecionar Tipo</option>
+                        <optgroup value="1" label="Metais">
+                        <option value="1">Ouro</option>
+                        <option value="1">Prata</option>
+                        <option value="1">Pratina</option>
+                    </optgroup>
+                    <optgroup value="2" label="Moeda Extrangeira">
+                        <option value="2">Dolar</option>
+                        <option value="2">Euro</option>
+                        <option value="2">Libra</option>
+                    </optgroup>
+                    <optgroup value="3" label="Ativo Fixo">
+                        <option value="3">Imovel</option>
+                        <option value="3">Lote</option>
+                    </optgroup>
+                    <optgroup value="4" label="Artigos">
+                        <option value="4">Relogio</option>
+                        <option value="4">Joia</option>
+                    </optgroup>
+                    <optgroup value="5" label="Antiguidades">
+                        <option value="5">Items Colecionaveis</option>
+                        <option value="6">Obra de Arte</option>
+                        <option value="7">Objetos Raros</option>
+                    </optgroup>
+                    </select>
+                </form>
+                <br>
+                <!-- CAIXA DE TEXTO -->
+                <form id="FORMULARIO" method="POST" action="../bd/capital.php">
+                    <label>Quantidade<br> </label><input type="text" id="quantidade" maxlength="7" placeholder="EX: 8"><br><br>
+                    <label>Valor*<br> </label><input type="text" id="Preco" maxlength="12" placeholder="EX: 32.000" required><br><br>
+                    <input id="btn_enviar" type="submit" value="Cadastrar">
+                </form>
+            </fieldset>
+        </div>
+    </nav>
+    <!--    FIM DO FORMULARIO     --->
+
 </body>
+
 </html>

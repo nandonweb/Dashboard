@@ -32,7 +32,7 @@ var options = {
     subtitle: 'Evolução Anual (12 Meses)'
   },
   width: 700,
-  height: 400
+  height: 401
 };
 
 var chart = new google.charts.Line(document.getElementById('grafico_linha'));

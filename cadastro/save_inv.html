@@ -8,8 +8,10 @@
     <title>Cadastrar Investimentos</title>
     <!--    CSS E JS    --->
     <link rel="stylesheet" href="css/invest.css">
-    <script type="text/javascript" src="save.js"></script>
     <script src="https://kit.fontawesome.com/1fa979fe85.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+    <script src="js/invest_save.js"></script>
 </head>
 
 <body>
@@ -17,7 +19,6 @@
     <header><a href="save.html">
             <img src="../img/seta_esquerda.png" alt="SetaEsquerda" style="width:70px;height:70px;">
         </a></header>
-
     <nav>
         <!--    FORMULARIO    --->
         <div id="objeto">
@@ -29,6 +30,7 @@
                 <form id="mes" method="GET" action="">
                     <label>Mes<br></label>
                     <select>
+                        <option selected="selected" disabled="disabled">Selecionar Mes</option>
                         <option value="Janeiro">Janeiro</option>
                         <option value="Fevereiro">Fevereiro</option>
                         <option value="Março">Março</option>
@@ -47,18 +49,28 @@
                 <!-- PLATAFORMA -->
                 <form id="plataforma" method="GET" action="">
                     <label>Plataforma<br></label>
-                    <select>
-                        <option value="1">Clear</option>
-                        <option value="2">XP Investimentos</option>
-                        <option value="3">Modal Mais</option>
-                        <option value="4">Binance</option>
-                        <option value="5">Coinbase</option>
-                        <option value="6">Tesouro Nacional</option>
-                        <option value="7">Avenue</option>
-                        <option value="8">Passfolio</option>
-                        <option value="9">C6 Bank</option>
-                        <option value="10">Itau</option>
-                        <option value="11">Bradesco</option>
+                    <select id="plataformas">
+                        <option selected="selected" disabled="disabled">Selecionar Plataforma</option>
+                        <optgroup value="1" label="Bolsa de Valores">
+                            <option value="1">Clear</option>
+                            <option value="1">XP Investimentos</option>
+                            <option value="1">Modal Mais</option>
+                        </optgroup>
+                        <optgroup value="2" label="Criptomoedas">
+                            <option value="2">Binance</option>
+                            <option value="2">Coinbase</option>
+                            <option value="2">Foxbit</option>
+                        </optgroup>
+                        <optgroup value="3" label="Renda Fixa">
+                            <option value="3">Tesouro Nacional</option>
+                            <option value="3">C6 Bank</option>
+                            <option value="3">Itau</option>
+                            <option value="3">Bradesco</option>
+                        </optgroup>
+                        <optgroup value="4" label="Bolsa Americana">
+                            <option value="4">Avenue</option>
+                            <option value="4">Passfolio</option>
+                        </optgroup>
                     </select>
                 </form>
                 <br>
@@ -66,20 +78,24 @@
                 <form id="tipo" method="GET" action="">
                     <label>Tipo<br></label>
                     <select>
+                        <option selected="selected" disabled="disabled">Selecionar Tipo</option>
                         <option value="tipo1">Ações</option>
                         <option value="tipo2">FIIS</option>
                         <option value="tipo3">Cripto</option>
-                        <option value="tipo4">SELIC/IPCA</option>
-                        <option value="tipo5">Bolsa EUA</option>
-                        <option value="tipo6">CDB/CDI</option>
+                        <option value="tipo4">SELIC</option>
+                        <option value="tipo4">IPCA</option>
+                        <option value="tipo6">CDB</option>
+                        <option value="tipo6">CDI</option>
+                        <option value="tipo5">Ações EUA</option>
+                        <option value="tipo5">FIIS EUA</option>
                     </select>
                 </form>
                 <br>
                 <!-- CAIXA DE TEXTO -->
-                <form id="formulario" method="POST" action="../bd/sucesso.html">
-                    <label>Quantidade: <br> </label><input type="number" name="quantidade" min="0"><br><br>
-                    <label>Total Investido: <br> </label><input type="number" name="investido" min="0"><br><br>
-                    <label>Total Atual: <br> </label><input type="number" name="atual" min="0"><br><br>
+                <form id="formulario" method="POST" action="../bd/invest.php">
+                    <label>Quantidade* <br> </label><input type="text" id="quantidade"  maxlength="7" placeholder="EX: 300" required><br><br>
+                    <label>Total Investido* <br> </label><input type="text" id="Preco" maxlength="12" placeholder="EX: 1.000" required><br><br>
+                    <label>Total Atual* <br> </label><input type="text" id="Preco2" maxlength="13" placeholder="EX: 9.360" required><br><br>
                     <input id="btn_enviar" type="submit" value="Cadastrar">
                 </form>
             </fieldset>

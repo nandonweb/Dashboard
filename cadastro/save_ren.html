@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Fonte de Renda</title>
+    <title>Cadastrar Fontes de Renda</title>
     <!--    CSS E JS    --->
     <link rel="stylesheet" href="css/renda.css">
-    <script type="text/javascript" src="save.js"></script>
     <script src="https://kit.fontawesome.com/1fa979fe85.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/select.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+    <script src="js/ren_save.js"></script>
 </head>
 
 <body>
@@ -24,12 +25,13 @@
         <div id="objeto">
             <fieldset>
                 <br>
-                <i class="fas fa-dollar-sign" style="font-size:50px;"></i>
+                <i class="fas fa-money-bill" style="font-size:50px;"></i>
                 <h3>Cadastro de Renda</h3>
                 <!--    MENU SUSPENSO    --->
                 <form id="mes" method="GET" action="">
                     <label>Mes<br></label>
                     <select>
+                        <option selected="selected" disabled="disabled">Selecionar Mes</option>
                         <option value="Janeiro">Janeiro</option>
                         <option value="Fevereiro">Fevereiro</option>
                         <option value="Março">Março</option>
@@ -48,22 +50,23 @@
                 </form>
                 <br>
 
-                <!-- FONTE DE RENDA -->
-                <form id="renda" method="GET" action="">
+                <!-- DIVIDAS -->
+                <form id="fontederenda" method="GET" action="">
                     <label>Renda<br></label>
-                    <select>
-                        <option value="renda1">CLT</option>
-                        <option value="renda2">Entregador de Comida</option>
-                        <option value="renda3">Motorista de App</option>
-                        <option value="renda4">Freelancer</option>
-                        <option value="renda5">Contrato PJ</option>
-                        <option value="renda6">Revenda</option>
+                    <select id="renda">
+                        <option selected="selected" disabled="disabled">Selecionar Opção</option>
+                        <option value="1">CLT</option>
+                        <option value="2">Entregador de Comida</option>
+                        <option value="3">Motorista de App</option>
+                        <option value="4">Freelancer</option>
+                        <option value="5">Contrato PJ</option>
+                        <option value="6">Revenda</option>
                     </select>
                 </form>
                 <br>
                 <!-- CAIXA DE TEXTO -->
-                <form id="formulario" method="POST" action="../bd/invest.php">
-                    <label>Renda Mensal: <br> </label><input type="number" name="rendamensal" min="0"><br><br>
+                <form id="formulario" method="POST" action="../bd/renda.php">
+                    <label>Renda Mensal*<br> </label><input type="text" id="Preco" maxlength="9" placeholder="EX: 1.100" required><br><br>
                     <input id="btn_enviar" type="submit" value="Cadastrar">
                 </form>
             </fieldset>

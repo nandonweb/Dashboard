@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    padding: 0;
-    background-image: no-repeat;
+    padding:0;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -16,8 +16,8 @@ img {
 }
 
 fieldset {
-    width: 320px;
-    height: 690px;
+    width: 290px;
+    height: 440px;
     border-radius: 20px;
     border: none;
     margin: auto;
@@ -72,5 +72,5 @@ input {
 footer {
     position: absolute;
     margin-left: 831px;
-    bottom: 0;
+    bottom: 0;   
 }
