@@ -12,21 +12,13 @@ h1 {
     font-size: 34px;
 }
 
-.w3grayscale {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row nowrap;
-    width: 100%;
-}
-
 .conteudo {
     width: 100%;
     text-align: center;
     justify-content: center;
 }
 
-img {
+.conteudo img {
     display: inline-block;
     margin-left: 50px;
     width: 180px;
@@ -35,14 +27,13 @@ img {
 
 }
 
-.w3-half {
+.conteudo img:hover{
+  padding: 7px;
+}
+
+.up {
     width: 51%;
     margin-left: auto;
     margin-right: auto;
 
-}
-
-footer {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
 }
