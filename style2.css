@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
-    background-image: url('/img/home/bg.jpg');
+    background-image: url('/Dashboard/img/home/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
