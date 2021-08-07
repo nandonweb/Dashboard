@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial | Dashboard</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="./css/invest.css">
+    <script src="https://kit.fontawesome.com/1fa979fe85.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+    <script src="js/invest_save.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="btn-abrir" onclick="abrirMenu()">&#9776; Abrir</a>
+    </header>
+    <nav id="sidebar">
+        <a href="#" onclick="fecharMenu()">&times; Fechar</a>
+        <a href="../index.html">Inicio</a>
+        <a href="save.html">Cadastro</a>
+        <a href="#">Graficos</a>
+        <a href="#">Alterar Dados</a>
+        <a href="../registro.html">Registro</a>
+        <a href="#">Sobre</a>
+    </nav>
+    <main id="conteudo">
+        <div id="objeto">
+            <fieldset>
+                <br>
+                <i class="fas fa-dollar-sign" style="font-size:50px;"></i>
+                <h3>Cadastro de Ativos</h3>
+                <!--    MENU SUSPENSO    --->
+                <form id="mes" method="GET" action="">
+                    <label>Mes<br></label>
+                    <select>
+                    <option selected="selected" disabled="disabled">Selecionar Mes</option>
+                    <option value="Janeiro">Janeiro</option>
+                    <option value="Fevereiro">Fevereiro</option>
+                    <option value="Março">Março</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Maio">Maio</option>
+                    <option value="Junho">Junho</option>
+                    <option value="Julho">Julho</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Setembro">Setembro</option>
+                    <option value="Outubro">Outubro</option>
+                    <option value="Novembro">Novembro</option>
+                    <option value="Dezembro">Dezembro</option>
+                </select>
+                </form>
+                <br>
+                <!-- PLATAFORMA -->
+                <form id="plataforma" method="GET" action="">
+                    <label>Plataforma<br></label>
+                    <select id="plataformas">
+                    <option selected="selected" disabled="disabled">Selecionar Plataforma</option>
+                    <optgroup value="1" label="Bolsa de Valores">
+                        <option value="1">Clear</option>
+                        <option value="1">XP Investimentos</option>
+                        <option value="1">Modal Mais</option>
+                    </optgroup>
+                    <optgroup value="2" label="Criptomoedas">
+                        <option value="2">Binance</option>
+                        <option value="2">Coinbase</option>
+                        <option value="2">Foxbit</option>
+                    </optgroup>
+                    <optgroup value="3" label="Renda Fixa">
+                        <option value="3">Tesouro Nacional</option>
+                        <option value="3">C6 Bank</option>
+                        <option value="3">Itau</option>
+                        <option value="3">Bradesco</option>
+                    </optgroup>
+                    <optgroup value="4" label="Bolsa Americana">
+                        <option value="4">Avenue</option>
+                        <option value="4">Passfolio</option>
+                    </optgroup>
+                </select>
+                </form>
+                <br>
+                <!-- TIPO DE INVESTIMENTO -->
+                <form id="tipo" method="GET" action="">
+                    <label>Tipo<br></label>
+                    <select>
+                    <option selected="selected" disabled="disabled">Selecionar Tipo</option>
+                    <option value="tipo1">Ações</option>
+                    <option value="tipo2">FIIS</option>
+                    <option value="tipo3">Cripto</option>
+                    <option value="tipo4">SELIC</option>
+                    <option value="tipo4">IPCA</option>
+                    <option value="tipo6">CDB</option>
+                    <option value="tipo6">CDI</option>
+                    <option value="tipo5">Ações EUA</option>
+                    <option value="tipo5">FIIS EUA</option>
+                </select>
+                </form>
+                <br>
+                <!-- CAIXA DE TEXTO -->
+                <form id="formulario" method="POST" action="../bd/invest.php">
+                    <label>Quantidade* <br> </label><input type="text" id="quantidade" maxlength="7" placeholder="EX: 300" required><br><br>
+                    <label>Total Investido* <br> </label><input type="text" id="Preco" maxlength="12" placeholder="EX: 1.000" required><br><br>
+                    <label>Total Atual* <br> </label><input type="text" id="Preco2" maxlength="13" placeholder="EX: 9.360" required><br><br>
+                    <input id="btn_enviar" type="submit" value="Cadastrar">
+                </form>
+            </fieldset>
+        </div>
+    </main>
+    <script src="script2.js"></script>
+</body>
+
+</html>
